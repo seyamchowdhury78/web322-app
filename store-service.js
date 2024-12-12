@@ -23,10 +23,8 @@ const Category = sequelize.define("Category", {
   category: Sequelize.STRING,
 });
 
-// Define Relationships
 Item.belongsTo(Category, { foreignKey: "category" });
 
-// Service Functions
 module.exports = {
   initialize() {
     return new Promise((resolve, reject) => {
